@@ -1,0 +1,114 @@
+$indicator-color: #26C3EB;
+.knob-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to right, #7d7e7d 0%,#0e0e0e 100%);
+  
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid thin rgba(17,17,17,1);
+  label{
+    display: flex;
+    justify-content: center;
+    width:auto;
+    margin: 10px;
+    color: $indicator-color;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-radius: 3px;
+  }
+  
+}
+.knob{
+  &.color{
+    .control{
+      background: linear-gradient(to bottom, rgba(255,50,50,1) 0%,rgba(255,247,40,1) 30%,rgba(255,247,40,1) 50%,rgba(62,255,40,1) 100%);
+    }
+  }
+  &.rotation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 4em;
+    background: radial-gradient(ellipse at center, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(76,76,76,1) 96%,rgba(19,19,19,1) 100%);
+    border-radius: 50%;
+    z-index: 1;
+    .indicator{
+      position: relative;
+      top:-30%;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      z-index: 10;
+      background: $indicator-color;
+      box-shadow: 0 0 5px 2px $indicator-color;
+    }
+    &.disabled{
+      .indicator{
+        background: silver;
+        box-shadow: 0 0 5px 2px silver;
+      }
+    }
+    &.small{
+      width: 2.5em;
+      height: 2.5em;
+      .indicator{
+        width: 0.2em;
+        height: 0.2em;
+      }
+    }
+  }
+
+  &.slider{
+    $slider-width: 50px;
+    $slider-height: 100px;
+    display: flex;
+    flex-direction: row;
+    width: $slider-width;
+    height: $slider-height;
+    border-radius: 4px;
+    //box-shadow:inset 1px 1px 10px 2px #000000;
+    padding: 5px 0;
+    z-index: 0;
+    .bars{
+      margin: 8px 0;
+      height: auto;
+      width: auto; 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .mark{
+        width: $slider-width;
+        height: 1px;
+        background-color: gray;
+      }
+    }
+    .control{
+      position: relative;
+      right: $slider-width / 2 + 4;
+      display: flex;
+      flex-direction: column-reverse;;
+      width: 2px;
+      height: $slider-height;
+      border: solid dimgray 3px;
+      background-color: black;
+      .bar{
+        position: relative;
+        left: -14px;
+        
+        width: 30px;
+        height: 20px;
+        background: linear-gradient(to bottom, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 47%,rgba(10,14,10,1) 50%,rgba(10,14,10,1) 50%,rgba(173,173,173,1) 51%,rgba(110,119,116,1) 53%,rgba(173,173,173,1) 98%);
+        border: thin gray solid;
+        border-radius: 3px;
+      }
+    }
+
+  }
+}

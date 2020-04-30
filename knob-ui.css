@@ -1,0 +1,151 @@
+.knob-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#7d7e7d), to(#0e0e0e));
+  background: linear-gradient(to right, #7d7e7d 0%, #0e0e0e 100%);
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: solid thin #111111;
+}
+
+.knob-box label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  margin: 10px;
+  color: #26C3EB;
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.knob.color .control {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff3232), color-stop(30%, #fff728), color-stop(50%, #fff728), to(#3eff28));
+  background: linear-gradient(to bottom, #ff3232 0%, #fff728 30%, #fff728 50%, #3eff28 100%);
+}
+
+.knob.rotation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 4em;
+  height: 4em;
+  background: radial-gradient(ellipse at center, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #4c4c4c 96%, #131313 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.knob.rotation .indicator {
+  position: relative;
+  top: -30%;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  z-index: 10;
+  background: #26C3EB;
+  -webkit-box-shadow: 0 0 5px 2px #26C3EB;
+          box-shadow: 0 0 5px 2px #26C3EB;
+}
+
+.knob.rotation.disabled .indicator {
+  background: silver;
+  -webkit-box-shadow: 0 0 5px 2px silver;
+          box-shadow: 0 0 5px 2px silver;
+}
+
+.knob.rotation.small {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.knob.rotation.small .indicator {
+  width: 0.2em;
+  height: 0.2em;
+}
+
+.knob.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50px;
+  height: 100px;
+  border-radius: 4px;
+  padding: 5px 0;
+  z-index: 0;
+}
+
+.knob.slider .bars {
+  margin: 8px 0;
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.knob.slider .bars .mark {
+  width: 50px;
+  height: 1px;
+  background-color: gray;
+}
+
+.knob.slider .control {
+  position: relative;
+  right: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  width: 2px;
+  height: 100px;
+  border: solid dimgray 3px;
+  background-color: black;
+}
+
+.knob.slider .control .bar {
+  position: relative;
+  left: -14px;
+  width: 30px;
+  height: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#aebcbf), color-stop(47%, #6e7774), color-stop(50%, #0a0e0a), color-stop(50%, #0a0e0a), color-stop(51%, #adadad), color-stop(53%, #6e7774), color-stop(98%, #adadad));
+  background: linear-gradient(to bottom, #aebcbf 0%, #6e7774 47%, #0a0e0a 50%, #0a0e0a 50%, #adadad 51%, #6e7774 53%, #adadad 98%);
+  border: thin gray solid;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=knob-ui.css.map */

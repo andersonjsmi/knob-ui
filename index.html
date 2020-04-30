@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KnobUI</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="knob-ui.css" type="text/css" media="all">
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #7d7e7d 0%,#0e0e0e 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="knob-box">
+      <div class="knob rotation small" id="knob-1"></div>
+    </div>
+    <div class="knob-box">
+      <div class="knob rotation" id="knob-2"></div>
+      <label class="display" for="knob-2">0</label>
+    </div>
+    <div class="knob rotation"></div>
+    <div class="knob-box">
+      <div class="knob slider" id="knob-3"></div>
+      <label for="knob-3">0</label>
+    </div>
+
+    <div class="knob-box">
+      <div class="knob rotation switch disabled"></div>
+    </div>
+    
+    <script src="jquery-3.5.0.min.js"></script>
+    <script src="knobs-ui.js"></script>
+    <script>
+
+    </script>
+  </body>
+</html>
