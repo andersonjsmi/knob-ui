@@ -33,7 +33,6 @@ function refreshValues(element){
     if(labels[cx].htmlFor === element.id)
       
       labels[cx].innerHTML = element.lastChild.value;
-      console.log(labels[cx].htmlFor + ' === '+ element.id);
   }
 }
 
